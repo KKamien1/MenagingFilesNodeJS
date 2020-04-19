@@ -3,6 +3,8 @@ const {convertCsv} = require('./csv.parse');
 const {promisify} = require('util');
 
 
+
+
 const readFilePromise = promisify(fs.readFile);
 
     // With promisify 
@@ -20,4 +22,5 @@ const read = async () => {
     console.table(convertCsv(data))
 }
 
+module.exports.read = read;
 read();

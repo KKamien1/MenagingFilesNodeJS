@@ -1,7 +1,9 @@
-// @ts-nocheck
 const {open, read} = require('fs');
 const {convertCsv} = require('./csv.parse');
 
+
+
+module.exports.read = () => {
 
 open('./data/pulitzer-circulation-data.csv', 'r', (err, fd) => {
   if (err) {
@@ -12,3 +14,5 @@ open('./data/pulitzer-circulation-data.csv', 'r', (err, fd) => {
     console.table(convertCsv(buff.toString()));
   });
 });
+
+}

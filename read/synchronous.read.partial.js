@@ -2,6 +2,7 @@
 const {openSync, readSync} = require('fs');
 const {convertCsv} = require('./csv.parse');
 
+module.exports.read = () => {
 
 fd = openSync('./data/app.log', 'r');
 console.log(fd);
@@ -16,3 +17,5 @@ do {
   //console.log('***********************', count, buffer.toString())
   
 } while (count > 0);
+
+}
